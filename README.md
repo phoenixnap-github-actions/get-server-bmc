@@ -1,0 +1,1 @@
+# bmc-getserver-github-action
