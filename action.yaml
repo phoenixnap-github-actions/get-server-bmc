@@ -1,0 +1,46 @@
+name: 'BMC Get Server'
+description: ''
+
+branding:
+  icon: crosshair
+  color: blue
+
+runs:
+  using: 'node12'
+  main: 'index.js'
+
+inputs:
+  clientid:
+    description: 'Client ID from application OAuth2 credentials.'
+    required: true
+  clientsecret:
+    description: 'Client Secret from application OAuth2 credentials.'
+    required: true
+
+  serverid:
+    description: 'The resource ID of the server to retrieve.'
+    required: true
+
+  bmcentrypoint:
+    description: 'The BMC API entrypoint.'
+    required: false
+    default: 'https://api.phoenixnap.com/bmc/v1/'
+  bmctokenhost:
+    description: 'The BMC OIDC token host.'
+    required: false
+    default: 'https://auth.phoenixnap.com'
+  bmctokenpath:
+    description: 'The BMC OIDC token path.'
+    required: false
+    default: '/auth/realms/BMC/protocol/openid-connect/token'
+
+
+outputs:
+  id:
+    description: 'The BMC server ID.'
+  status:
+    description: 'The current server status.'
+  hostname:
+    description: 'The hostname of the server.'
+  ipaddresses: 
+    description: 'A comma separated list of public IP address attached to the new server.'
