@@ -1,4 +1,4 @@
-# bmc-createserver-github-action
+# bmc-getserver-github-action
 
 This action retrieves basic information about a server in the PhoenixNAP Bare Metal Cloud platform and makes that information available as Action outputs. The action is synchronous.
 
